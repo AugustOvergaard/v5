@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mealtracker</title>
+    <link rel="stylesheet" href="mealtracker.css">
+    <script src = "../javascript/models.js" defer> </script>
+    <script src = "../javascript/backendApi.js" defer> </script>
+    <script src = "../javascript/api.js" defer> </script>
+    <script src = "../javascript/common.js" defer> </script>
+    <script src = "../javascript/geolocation.js" defer> </script>
+    <script src = "mealtracker.js" defer></script>
+</head>
+<body>
+    <nav class = "myNav">
+        <div id="logo"> NutriTracker</div>
+        <img id="billede" src="../images/LOGO.png" alt="">
+        <a href="../Login/Login.html" id="Login">Login</a>
+        <a href="../mealcreator/mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="../nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="../activity/activity.html" id="activity"> Activity Tracker</a>
+        <a href="../account/account.html" id="account"> Account</a>
+        
+    </nav>
+
+    <div id="mealtracker">
+        <h2>Meal Tracker</h2>
+        <img class = "img"src="../images/gPlus.png" alt="" onclick="showAddTrackedMealForm()">
+        <img class = "img "src="../images/bPlus.png" alt="" onclick="showTrackWaterForm()">
+
+        <div id="waterTracker" style="display: none;">
+            <label for="water">How much water did you drink (Liters)</label>
+            <input type="number" name="water" id="water">
+            <button id="waterButton">Track Water Intake</button>
+        </div>
+
+        <!-- Toggable section for adding tracked meal -->
+        <div id="addTrackedMealId" style="display: none">
+            <table >
+                <tr>
+                    <td colspan="2" style="text-align: start"><h2>Create Tracked meal</h2></td>
+                </tr>
+
+                <tr>
+                    <td><label for="trackedMealType">Meal type:</label></td>
+                    <td>
+                        <select id="trackedMealType">
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Snack">Snack</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="trackedMealSelect">Meal</label></td>
+                    <td>
+                        <select id="trackedMealSelect"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="trackedMealWeightInGrams">How much did you eat (in grams)</label></td>
+                    <td><input type="number" id="trackedMealWeightInGrams"> grams</td>
+                </tr>
+            </table>
+            <p>
+                <button id="createTrackedMeal" onclick="createOrEditTrackedMeal()">Track Meal</button>
+            </p>
+
+
+
+
+        </div>
+
+        <!-- Tracked meals list -->
+        <table>
+            <thead>
+                <th></th>
+                <th>Meal</th>
+                <th>Meal type</th>
+                <th>Weight (grams)</th>
+                <th>Energy (kcal)</th>
+                <th>Cons. nutrients</th>
+                <th>Location</th>
+                <th>Added On</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </thead>
+
+            <tbody id="trackedMealsBody"></tbody>
+        </table>
+        </div>
+    </div>
+
+</body>
+</html>

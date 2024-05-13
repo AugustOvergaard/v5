@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Nutri</title>
+    <link rel="stylesheet" href="nutrireport.css">
+</head>
+<body>
+    <nav class = "myNav">
+        <div id="logo"> NutriTracker</div>
+        <img id="billede" src="../images/LOGO.png" alt="">
+        <a href="../Login/Login.html" id="Login">Login</a>
+        <a href="../mealcreator/mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="../mealtracker/mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="/nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="../activity/activity.html" id="activity"> Activity Tracker</a>
+        <a href="../account/account.html" id="account"> Account</a>
+     
+    </nav>
+
+    <div id="nutrireport">
+        <h2>Daily Nutri</h2>
+        <div id="buttonsDiv">
+        <button id="hourButton" onclick="showDailyView()">Last 24 Hours</button>
+        <button id="monthButton" onclick="showMonthlyView()">Monthly</button>
+        </div>
+        <div id="hourView" style="display: none;">
+        <table id = "DailyNutriHour">
+            <thead>
+                <th>Day</th>
+                <th>Hour</th>
+                <th>Energy</th>
+                <th>Water</th>
+                <th>Calorie surplus/deficit</th>
+                <th>Total Burned</th>
+            </thead>
+            <tbody id="hourViewBody">
+            </tbody>
+        </table>
+        </div>
+
+
+        <div id="monthlyView" style="display: none;">
+            <table id="DailyNutriMonthly">
+                <thead>
+                <th>Month</th>
+                <th>Day</th>
+                <th>Energy</th>
+                <th>Water</th>
+                <th>Calorie surplus/deficit</th>
+                <th>Total Burned</th>
+                </thead>
+            <tbody id="monthlyViewBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script defer src="daily.js"></script>
+    <script src = "../javascript/backendApi.js" defer> </script>
+    <script src = "../javascript/common.js" defer> </script>
+</body>
+</html>

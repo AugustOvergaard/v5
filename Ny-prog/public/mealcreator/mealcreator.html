@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Creator</title>
+    <link rel="stylesheet" href="mealcreator.css">
+    <script src = "../javascript/models.js" defer> </script>
+    <script src = "../javascript/backendApi.js" defer> </script>
+    <script src = "../javascript/api.js" defer> </script>
+    <script src = "../javascript/common.js" defer> </script>
+    <script src = "./mealcreator.js" defer></script>
+
+</head>
+
+<body>
+    <nav class="myNav">
+        <div id="logo"> NutriTracker</div>
+        <img id="billede" src="../images/LOGO.png" alt="">
+        <a href="../Login/Login.html" id="Login">Login</a>
+        <a href="mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="../mealtracker/mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="../nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="../activity/activity.html" id="activity"> Activity Tracker</a>
+        <a href="../account/account.html" id="account"> Account</a>
+    </nav>
+
+    <div id="mealcreator">
+        <h2>Meal Creator</h2>
+        <a><img  class="img" src="../images/bPlus.png" alt=""></a>
+        <a><img onclick="showAddMealForm()" class="img" src="../images/gPlus.png" alt=""></a>
+
+        <!-- Toggable section for adding a meal -->
+        <div id="addMealId" style="display: none">
+            <label for="mealName">Name of meal:</label>
+            <input type="text" id="mealName" placeholder="Enter name of meal" />
+            <input type="button" id="createButton" onclick="createNewMeal(document.getElementById('mealName').value)" value="Create" />
+
+            <div>
+                <input type="text" id="searchBox"placeholder="Search for food" value="">
+                <button id="searchButton"onclick="foodItemSearch(document.getElementById('searchBox').value)">Search</button>
+                <p id="spinner" style="display: none"><b>Loading data from api.....</b></p>
+            </div>
+
+            <!-- List of foods returned from the API -->
+            <table id="foodSearchTable">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Energy (Kj)</th>
+                        <th>Energy (Kcal)</th>
+                        <th>Protein</th>
+                        <th>Fiber</th>
+                        <th>Fat</th>
+                        <th>Carbohydrates</th>
+                        <th>Weight in grams</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="foodsTableId"></tbody>
+            </table>
+
+
+            <!-- CURRENT FOOD -->
+            <h2>Current Meal: <span id="currentMealName"></span></h2>
+            <div id="currentMeal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Weight in Grams</th>
+                            <th>Energy (Kj)</th>
+                            <th>Energy (Kcal)</th>
+                            <th>Protein</th>
+                            <th>Fiber</th>
+                            <th>Fat</th>
+                            <th>Carbohydrates</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="currentMealBody"></tbody>
+                </table>
+                <p></p>
+                <input type="button" id="saveMealButton" value="Save Meal" onclick="(async () => { calculateTotalsForMeal(currentMeal); await saveMeal(currentMeal); clearMeal(); await renderExistingMeals()})()">
+            </div>
+        </div>
+
+        <!-- End toggable meal -->
+
+        <!-- Existing Meals -->
+        <h2>Existing Meals</h2>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>Meal Name</th>
+                    <th>Total Kcal</th>
+                    <th>Total Protein</th>
+                    <th>Total Fiber</th>
+                    <th>Total Fat</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
+
+                <tbody id="existingMealsBody">
+                </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

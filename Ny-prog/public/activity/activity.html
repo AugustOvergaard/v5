@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="activity.css">
+</head>
+<body>
+
+    <nav class="myNav">
+        <div>
+            <div id="logo"> NutriTracker</div>
+        </div>
+        <img id="billede" src="/images/LOGO.png" alt="">
+        <a href="/login/login.html" id="login">Login</a>
+        <a href="/mealcreator/mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="/mealtracker/mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="/nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="/activity/activity.html" id="activity"> Activity Tracker</a>
+        <a href="/account/account.html" id="account"> Account</a>
+    </nav>
+
+    <div id="activityDiv">
+        <h2>Track Your Activity</h2>
+
+        <select id="activities" required> 
+            <option value="default" disabled selected hidden>Activity</option>
+            <option value="215">Almindelig gang</option>
+            <option value="414">Gang ned af trapper</option>
+            <option value="1079">Gang op af trapper</option>
+            <option value="281">Slå græs med manuel maskine</option>
+            <option value="236">Lave mad og redde senge</option>
+            <option value="362">Luge ukrudt</option>
+            <option value="481">Rydde Sne</option>
+            <option value="74">Læse eller se TV</option>
+            <option value="89">Stå oprejst</option>
+            <option value="310">Cykling i roligt tempo</option>
+            <option value="163">Tørre støv af</option>
+            <option value="281">Vaske gulv</option>
+            <option value="259">Pudse vinduer</option>
+            <option value="814">Cardio</option>
+            <option value="348">Hård styrketræning</option>
+            <option value="318">Badminton</option>
+            <option value="318">Volleyball</option>
+            <option value="236">Bordtennis</option>
+            <option value="355">Dans i højt tempo</option>
+            <option value="259">Dans i moderat tempo</option>
+            <option value="510">Fodbold</option>
+            <option value="384">Rask gang</option>
+            <option value="244">Golf</option>
+            <option value="466">Håndbold</option>
+            <option value="466">Squash</option>
+            <option value="666">Jogging</option>
+            <option value="405">Langrend</option>
+            <option value="872">Løb i moderat tempo</option>
+            <option value="1213">Løb i højt tempo</option>
+            <option value="414">Ridning</option>
+            <option value="273">Skøjteløb</option>
+            <option value="296">Svømning</option>
+            <option value="658">Cykling i højt tempo</option>
+            <option value="259">Bilreparation</option>
+            <option value="414">Gravearbejde</option>
+            <option value="236">Landbrugsarbejde</option>
+            <option value="185">Let kontorarbejde</option>
+            <option value="215">Male hus</option>
+            <option value="207">Murerarbejde</option>
+            <option value="1168">Hugge og slæbe på brænde</option>
+        </select>
+        <input type="number" id="duration" placeholder="Duration (minutes)">
+        <div id="beholderForBurnedCalories">
+            <button id="trackActivity">Track Activity</button>
+            <div id="beholderForBurnedCaloriesResultat">
+                <label for="burnedCalories">Total amount of burned calories:</label>
+                <div id="resultBurnedCalories"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div id="basalstofskifteDiv">
+        <h2>Calculate Your Basal Metabolic Rate</h2>
+        <form id="bmrForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required><br>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="default" disabled selected hidden>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <div id="beholderForCalculatedBMR">
+                <button id="bmrCalculateButton">Calculate BMR</button>
+                <div id="beholderForCalculatedBMRResultat">
+                    <label for="calculatedBMR">Calculated BMR (MJ):</label>
+                    <div id="calculatedBMRResultat"></div>
+                </div>
+            </div>
+            
+        </form>
+    
+        <div id="result"></div>
+    
+
+    </div>
+
+
+<script defer src="activity.js"></script>
+</body>
+</html>

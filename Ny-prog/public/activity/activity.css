@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myNav {
+    height: 100px;
+    background-color: #def6d8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#billede {
+    width: 50px;
+    margin-left: -50px;
+}
+
+#logo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #91c789;
+    font-size: 25px;
+}
+
+#creator, #tracker, #report, #login, #account, #activity{
+    font-family: 'Nunito', sans-serif;
+    color: #9e9e9e;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+label{
+    font-family: 'Nunito', sans-serif;  
+}
+
+
+/* Content Divs */
+#activityDiv, #basalstofskifteDiv {
+    background-color: #def6d8;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #91c789;
+}
+
+#bmrForm {
+    font-family: 'Nunito', sans-serif;
+}
+
+select, input[type="number"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #91c789;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    background-color:  #91c789;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #77a56f;
+}
+
+#resultBurnedCalories{
+    background-color: #def6d8;
+    height: 20px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: #555;
+}
+
+#beholderForBurnedCalories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#beholderForBurnedCaloriesResultat{
+    display: flex;
+    align-items: center;
+}
+
+#beholderForCalculatedBMR{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#calculatedBMRResultat{
+    background-color: #def6d8;
+    height: 20px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+#beholderForCalculatedBMRResultat{
+    display: flex;
+    align-items: center;
+}

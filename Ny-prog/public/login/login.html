@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+
+</head>
+
+<body>
+
+
+    <nav class="myNav">
+        <div>
+            <div id="logo"> NutriTracker</div>
+            
+        </div>
+        <img id="billede" src="/images/LOGO.png" alt="">
+        <a href="/login/login.html" id="Login">Login</a>
+        <a href="/mealcreator/mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="/mealtracker/mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="/nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="/activity/activity.html" id="activity"> Activity Tracker</a>
+        <a href="/account/account.html" id="account"> Account</a>
+    </nav>
+
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-container sign-up">
+                <h1>Create Account</h1>
+                <p>Create an account to utilise the features of the application</p>
+                <form>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required >
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="number" id="age" placeholder="Age"required >
+                    <input type="number" id="height" placeholder="Height (cm)" required>
+                    <input type="number" id="weight" placeholder="Weight (kg)"required>
+                    <select id="Gender" required>
+                        <option value="default" disabled selected hidden>Gender</option>
+                        <option  value="male">Male</option>
+                        <option  value="female">Female</option>
+                        <option  value="Andet" >Andet</option>
+                    </select>
+                    <button id="signUpButton">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="form-container sign-in">
+                <h1>Sign In</h1>
+                <p>Already have an account? Sign in and start tracking</p>
+                <form>
+                    <input id="emailSignIn"type="email" placeholder="Email" required>
+                    <input id="passwordSignIn" type="password" placeholder="Password" required>
+                    <button id="signInButton">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script defer src="login.js"></script>
+
+
+</body>
+
+</html>

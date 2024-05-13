@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar */
+.myNav {
+    height: 100px;
+    background-color: #def6d8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#billede {
+    width: 50px;
+    margin-left: -50px;
+}
+
+#logo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #91c789;
+    font-size: 25px;
+}
+
+#creator,
+#tracker,
+#report, #activity, #account, #Login {
+    font-family: 'Nunito', sans-serif;
+    color: #9e9e9e;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* Meal creator */
+#mealcreator {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: auto;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-style: solid;
+    border-radius: 1%;
+    border-color: #99d9de;
+    margin: 20px;
+}
+
+/* Table styles */
+table {
+    font-family: 'Nunito', sans-serif;
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid #def6d8;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #def6d8;
+}
+
+tr:nth-child(even) {
+    background-color: #def6d6;
+}
+
+tr {
+    background-color: #def6d8;
+}
+
+.img {
+    width: 25px;
+}
+
+#list {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 25px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: #def6d8;
+}
+
+.pointer {
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    color: #91c789;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#createButton, #searchButton, #saveMealButton, #addFoodButton{
+font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #91c789;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#foodSearchTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#foodSearchTable th,
+#foodSearchTable td {
+    border: 1px solid #def6d8;
+    padding: 8px;
+    text-align: left;
+}
+
+#foodSearchTable th {
+    background-color: #def6d8;
+}
+
+#foodSearchTable tbody tr:nth-child(even) {
+    background-color: #def6d6;
+}
+
+/* Foods Table */
+#foodsTableId {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#foodsTableId th,
+#foodsTableId td {
+    border: 1px solid #def6d8;
+    padding: 8px;
+    text-align: left;
+}
+
+#foodsTableId th {
+    background-color: #def6d8;
+}
+
+#foodsTableId tbody tr:nth-child(even) {
+    background-color: #def6d6;
+}
+
+#currentMeal {
+    margin-top: 20px;
+}
+
+#currentMeal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#currentMeal th,
+#currentMeal td {
+    border: 1px solid #def6d8;
+    padding: 8px;
+    text-align: left;
+}
+
+#currentMeal th {
+    background-color: #def6d8;
+}
+
+#currentMeal tbody tr:nth-child(even) {
+    background-color: #def6d6;
+}
+
+#currentMeal input[type="button"] {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #91c789;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#currentMeal input[type="button"]:hover {
+    background-color: #77a56f;
+}

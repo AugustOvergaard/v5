@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+    <nav class="myNav">
+        <div>
+            <div id="logo"> NutriTracker</div>
+            
+        </div>
+        <img id="billede" src="/images/LOGO.png" alt="">
+        <a href="/login/login.html" id="login">Login</a>
+        <a href="/mealcreator/mealcreator.html" id="creator"> Meal Creator</a>
+        <a href="/mealtracker/mealtracker.html" id="tracker"> Meal Tracker</a>
+        <a href="/nutrientreport/nutrireport.html" id="report"> Daily Nutri</a>
+        <a href="/activity/activity.html" id="activity">Activity Tracker</a>
+        <a href="/account/account.html" id="account"> Account</a>
+    </nav>
+
+    <div id="brugerinformation">
+        <div id="brugerDiv">
+            <h2>Account</h2>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name=""readonly>
+            <label for="age">Age:</label>
+            <input type="text" name="" id="age" readonly>
+            <label for="weight">Weight:</label>
+            <input type="text" name="" id="weight" readonly>
+            <label for="gender">Gender:</label>
+            <input type="text" name="" id="gender" readonly>
+
+            <div id="buttonsDiv">
+                <button id="editInfo">Edit Account Information</button>
+                <button id="saveChanges">Save Changes</button>
+                <button id="signOut">Sign Out</button>
+                <button id="deleteAccountButton">Delete Account</button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script defer src="account.js"></script>
+</body>
+
+</html>
